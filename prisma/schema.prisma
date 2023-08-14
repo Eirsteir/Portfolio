@@ -11,8 +11,25 @@ datasource db {
   relationMode = "prisma"
 }
 
-model Example {
+model Project {
     id        String   @id @default(cuid())
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
+    title      String
+    subtitle String 
+    body String @db.VarChar(250)
+    programmingLanguage String
+    date DateTime
+    img String?
+    github String?
+    url String?
+    type ProjectType
+}
+
+enum ProjectType {
+    PERSONAL
+    SCHOOL
+    SUMMER_INTERNSHIP
+    PART_TIME_JOB
+    OTHER
 }

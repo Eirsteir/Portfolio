@@ -3,7 +3,7 @@ import Link from "next/link";
 import { api } from "~/utils/api";
 
 export default function Home() {
-  const hello = api.example.hello.useQuery({ text: "from tRPC" });
+  const { data: projects } = api.projects.getAll.useQuery();
 
   return (
     <>
@@ -42,7 +42,13 @@ export default function Home() {
             </Link>
           </div>
           <p className="text-2xl text-white">
-            {hello.data ? hello.data.greeting : "Loading tRPC query..."}
+            {projects?.map((project) => (
+              <div key={project.id}>
+                {project.title}
+                <p>{project.subtitle}</p>
+                <p>{project.body}</p>
+              </div>
+            ))}
           </p>
         </div>
       </main>
