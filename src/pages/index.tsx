@@ -33,10 +33,10 @@ export default function Home() {
 
                 <div className="flex">
                   <a className="mr-2 inline-block hover:underline" href="#">
-                    Work,
+                    Projects,
                   </a>
                   <a className="mr-2 inline-block hover:underline" href="#">
-                    About,
+                    Info,
                   </a>
                   <a className="mr-2 inline-block hover:underline" href="#">
                     Contact
@@ -69,7 +69,7 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="h-21 w-20 pt-10 font-bold"
+                className="h-21 w-20 cursor-pointer pt-10 font-bold"
               >
                 <path
                   strokeLinecap="round"

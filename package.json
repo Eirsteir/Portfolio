@@ -10,7 +10,7 @@
     "start": "next start"
   },
   "dependencies": {
-    "@fontsource/roboto": "^5.0.8",
+    "@fontsource-variable/cabin": "^5.0.9",
     "@prisma/client": "^5.1.1",
     "@t3-oss/env-nextjs": "^0.3.1",
     "@tanstack/react-query": "^4.29.25",
