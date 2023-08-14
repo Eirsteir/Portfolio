@@ -12,7 +12,7 @@ export default function Home() {
         <meta name="description" content="Eirik Steira's Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className="relative bg-primary px-12">
+      <main className="relative bg-primary px-16">
         <section className="relative">
           <nav>
             <div className="container mx-auto">
@@ -45,20 +45,20 @@ export default function Home() {
               </div>
             </div>
           </nav>
-          <div className="container relative pb-64 pt-7 lg:pb-28">
+          <div className="container relative pb-64 pt-2 lg:pb-28">
             <div className="relative max-w-sm md:max-w-xl xl:max-w-5xl">
               <div className="">
-                <h1 className="font-heading md:text-11xl xl:text-13xl text-7xl">
-                  <span className="block">FULLSTACK WEB</span>
-                  <span className="block">DEVELOPER</span>
+                <h1 className="font-heading md:text-11xl xl:text-13xl text-8xl">
+                  <span className="block">EIRIK</span>
+                  <span className="block">STEIRA</span>
                 </h1>
               </div>
             </div>
             <div className="mr-auto mt-5 block">
               <Image
-                src="/me.png"
+                src="/unnamed (1).jpg"
                 width={400}
-                height={150}
+                height={120}
                 alt="An image of myself"
               />
             </div>
@@ -69,7 +69,7 @@ export default function Home() {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="h-21 w-20 cursor-pointer pt-10 font-bold"
+                className="h-21 w-20 cursor-pointer pt-5 font-bold"
               >
                 <path
                   strokeLinecap="round"
@@ -79,8 +79,8 @@ export default function Home() {
               </svg>
               <div className="ml-auto max-w-sm text-right">
                 <h1 className="font-heading md:text-11xl xl:text-13xl text-7xl">
-                  <span className="block">EIRIK</span>
-                  <span className="block">STEIRA</span>
+                  <span className="block">FULLSTACK</span>
+                  <span className="block">DEVELOPER</span>
                 </h1>
               </div>
             </div>
