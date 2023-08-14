@@ -1,9 +1,11 @@
+import { type Project } from "@prisma/client";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "~/components/Button";
 import { GithubIconButton } from "~/components/GithubIconButton";
 import { LiveDemoButton } from "~/components/LiveDemoButton";
+import { ProjectCard } from "~/components/ProjectCard";
 import { api } from "~/utils/api";
 
 export default function Home() {
@@ -101,60 +103,13 @@ export default function Home() {
             PROJECTS
           </h3>
 
-          {/* <div key={project.id}>
-                <Image
-                  width={400}
-                  height={300}
-                  src={project.img ?? ""}
-                  alt={`Project '${project.title} cover image'`}
-                />
-                <h4>{project.title}</h4>
-                <p>{project.subtitle}</p>
-                <p>{project.body}</p>
-              </div> */}
-
           <div>
-            {projects?.map((project) => (
-              <div
+            {projects?.map((project: Project, i: number) => (
+              <ProjectCard
                 key={project.id}
-                className="my-4 flex flex-col overflow-hidden md:flex-row"
-              >
-                <div className="pr-4 md:w-1/2">
-                  <div className="">
-                    <h4 className="mb-2 text-xl font-semibold">
-                      {project.title}
-                    </h4>
-                    <p className="text-gray-600">{project.body}</p>
-                    <p className="mt-2 text-gray-600">
-                      Programming Language: {project.programmingLanguage}
-                    </p>
-                    <p className="mt-2 text-gray-600">
-                      Date: {project.date.toDateString()}
-                    </p>
-                    <a
-                      href="#"
-                      className="hover:text-primary-dark mt-4 inline-block font-semibold text-primary"
-                    >
-                      Learn More
-                    </a>
-                    <div className="flex items-center gap-4">
-                      {project.github && (
-                        <GithubIconButton link={project.github} />
-                      )}
-                      {project.url && <LiveDemoButton link={project.url} />}
-                    </div>
-                  </div>
-                </div>
-                <div className="md:w-1/2">
-                  <Image
-                    width={600}
-                    height={400}
-                    src={project.img ?? ""}
-                    alt="Project"
-                    className="h-auto w-full object-cover"
-                  />
-                </div>
-              </div>
+                project={project}
+                imageOnLeft={i % 2 === 0}
+              />
             ))}
           </div>
         </section>
