@@ -29,9 +29,7 @@ const NavbarItem = ({ href, isSelected, children }: NavbarItemProps) => (
 );
 
 export const Navbar = () => {
-  const router = useRouter();
-  const currentRoute = router.pathname;
-  console.log(currentRoute);
+  const { pathname: currentRoute } = useRouter();
 
   return (
     <nav className="absolute right-20 top-32 z-50">
