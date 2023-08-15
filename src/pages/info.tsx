@@ -1,3 +1,5 @@
+import { ArrowDownIcon } from "~/icons/ArrowDownIcon";
+
 export default function Info() {
   return (
     <div className="min-w-screen flex min-h-screen items-center justify-center">
@@ -19,6 +21,12 @@ export default function Info() {
             est velit. Nam aliquet massa ut faucibus fermentum.
           </p>
         </div>
+        <a
+          href="#"
+          className="mt-4 flex items-baseline text-xl hover:underline"
+        >
+          <ArrowDownIcon /> Resume
+        </a>
       </div>
     </div>
   );

@@ -1,3 +1,5 @@
+import { ArrowUpRightIcon } from "~/icons/ArrowUpRightIcon";
+
 export default function Contact() {
   return (
     <div className="min-w-screen flex min-h-screen items-center justify-center">
@@ -6,15 +8,29 @@ export default function Contact() {
           CONTACT
         </h2>
         <div className="grid grid-cols-4 gap-8">
-          <h4 className="text-xl font-bold">Mail</h4>
-          <p className="">steiraeirik@gmail.com</p>
-          <h4 className="text-xl font-bold">Social Media</h4>
+          <h4 className="text-xl font-bold">MAIL</h4>
+          <a
+            href="mailto:steiraeirik@gmail.com"
+            className="flex items-baseline text-xl hover:underline"
+          >
+            <ArrowUpRightIcon /> steiraeirik@gmail.com
+          </a>
+          <h4 className="text-xl font-bold">SOCIAL MEDIAS</h4>
           <div className="flex flex-col">
-            <p>Github</p>
-            <p>LinkedIn</p>
+            <a
+              href="https://github.com/Eirsteir"
+              className="flex items-baseline text-xl hover:underline"
+            >
+              <ArrowUpRightIcon /> Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/eirik-steira/"
+              className="flex items-baseline text-xl hover:underline"
+            >
+              <ArrowUpRightIcon /> LinkedIn
+            </a>
           </div>
         </div>
-        <p>Resume</p>
       </div>
     </div>
   );
