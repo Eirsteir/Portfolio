@@ -1,9 +1,5 @@
 import { type Project } from "@prisma/client";
-import {
-  type GetStaticPropsContext,
-  type GetStaticProps,
-  type InferGetStaticPropsType,
-} from "next";
+
 import Image from "next/image";
 import { ProjectCard } from "~/components/ProjectCard";
 import { appRouter } from "~/server/api/root";
@@ -21,7 +17,7 @@ export async function getStaticProps(context) {
 
   await helpers.projects.getAll.prefetch();
 
-  return {};
+  return { props: {} };
 }
 
 export default function Home() {
