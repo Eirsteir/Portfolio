@@ -1,10 +1,31 @@
 import { type Project } from "@prisma/client";
+import {
+  type GetStaticPropsContext,
+  type GetStaticProps,
+  type InferGetStaticPropsType,
+} from "next";
 import Image from "next/image";
 import { ProjectCard } from "~/components/ProjectCard";
+import { appRouter } from "~/server/api/root";
 import { api } from "~/utils/api";
+import { createServerSideHelpers } from "@trpc/react-query/server";
+import { prisma } from "~/server/db";
+import superjson from "superjson";
+
+export async function getStaticProps(context) {
+  const helpers = createServerSideHelpers({
+    router: appRouter,
+    ctx: { prisma },
+    transformer: superjson, // optional - adds superjson serialization
+  });
+
+  await helpers.projects.getAll.prefetch();
+
+  return {};
+}
 
 export default function Home() {
-  const { data: projects } = api.projects.getAll.useQuery(); // TODO: static rendering
+  const { data: projects } = api.projects.getAll.useQuery();
 
   return (
     <div className="no-scrollbar h-screen overflow-y-scroll">
