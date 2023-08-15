@@ -41,7 +41,7 @@ export const ProjectCard = ({
         Programming Language: {project.programmingLanguage}
       </p>
       <p className="mt-2 text-gray-600">
-        Date: {project.date.toLocaleDateString("en-us")}
+        Date: {new Date(project.date).toLocaleDateString("en-us")}
       </p>
       <a
         href="#"

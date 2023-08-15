@@ -1,5 +1,9 @@
 import { type Project } from "@prisma/client";
-
+import {
+  type GetStaticPropsContext,
+  type GetStaticProps,
+  type InferGetStaticPropsType,
+} from "next";
 import Image from "next/image";
 import { ProjectCard } from "~/components/ProjectCard";
 import { appRouter } from "~/server/api/root";
@@ -12,17 +16,17 @@ export async function getStaticProps(context) {
   const helpers = createServerSideHelpers({
     router: appRouter,
     ctx: { prisma },
-    transformer: superjson, // optional - adds superjson serialization
+    transformer: superjson,
   });
 
-  await helpers.projects.getAll.prefetch();
-
-  return { props: {} };
+  const projects = await helpers.projects.getAll.fetch();
+  const { json } = superjson.serialize(projects);
+  return { props: { projects: json } };
 }
 
-export default function Home() {
-  const { data: projects } = api.projects.getAll.useQuery();
-
+export default function Home({
+  projects,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <div className="no-scrollbar h-screen overflow-y-scroll">
       <div>
