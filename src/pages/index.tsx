@@ -31,8 +31,8 @@ export default function Home({
     <div className="no-scrollbar h-screen overflow-y-scroll">
       <div>
         <div className="container mx-auto ">
-          <div className="flex h-24 items-center justify-between">
-            <div className="flex items-center gap-28 font-medium">
+          <div className="flex h-36 items-center justify-between md:h-24">
+            <div className="flex items-center font-medium md:gap-28">
               <a className="inline-block" href="#">
                 Eirik Steira
               </a>
@@ -49,16 +49,16 @@ export default function Home({
           </div>
         </div>
       </div>
-      <div className="container relative pb-64 pt-2 lg:pb-28">
+      <div className="container relative pb-64 pt-20 md:pt-2 lg:pb-28">
         <div className="relative ">
           <div className="inline-block">
-            <h1 className="font-heading md:text-11xl xl:text-13xl text-8xl">
+            <h1 className="font-heading text-6xl md:text-8xl">
               <span className="block">EIRIK</span>
               <span className="block">STEIRA</span>
             </h1>
           </div>
         </div>
-        <div className="mr-auto mt-2 block">
+        <div className="mr-auto mt-8 block md:mt-2">
           <Image
             src="/unnamed (1).jpg"
             width={400}
@@ -66,7 +66,7 @@ export default function Home({
             alt="An image of myself"
           />
         </div>
-        <div className="container mx-auto flex items-center px-4">
+        <div className="container mx-auto flex items-center px-4 pt-10 md:pt-0">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -82,14 +82,14 @@ export default function Home({
             />
           </svg>
           <div className="ml-auto max-w-sm text-right">
-            <h2 className="font-heading md:text-11xl xl:text-13xl text-7xl">
+            <h2 className="font-heading text-4xl md:text-7xl">
               <span className="block">SOFTWARE</span>
               <span className="block">DEVELOPER</span>
             </h2>
           </div>
         </div>
       </div>
-      <div className="container mx-auto">
+      <div className="container md:mx-auto">
         <h3 className="font-heading mb-8 mt-4 text-5xl font-bold">PROJECTS</h3>
 
         <div>

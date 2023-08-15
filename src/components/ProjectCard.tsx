@@ -11,7 +11,7 @@ export const ProjectCard = ({
   imageOnLeft?: boolean;
 }) => (
   <div
-    className={`relative my-4 flex flex-col overflow-hidden px-8 py-12 md:flex-row ${
+    className={`relative flex flex-col overflow-hidden md:my-4 md:flex-row md:px-8 md:py-12 ${
       !imageOnLeft ? "md:flex-row-reverse" : ""
     }`}
   >
@@ -29,9 +29,9 @@ export const ProjectCard = ({
       />
     </div>
     <div
-      className={`absolute bottom-0 ${
+      className={`bottom-0 md:absolute ${
         imageOnLeft ? "right-12" : "left-12"
-      } bg-primary p-4 pr-4 md:w-1/2`}
+      } bg-primary p-4 md:w-1/2 md:pr-4`}
     >
       <h4 className="mb-2 text-4xl font-semibold">{project.title}</h4>
       <h5 className="mb-1 text-lg text-gray-400">{project.subtitle}</h5>

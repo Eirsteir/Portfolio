@@ -15,7 +15,7 @@ export default function Layout({ children }) {
       </Head>
       <div className="no-scrollbar flex ">
         <Navbar />
-        <main className="no-scrollbar relative min-h-screen w-screen min-w-full flex-grow overflow-y-hidden bg-primary px-16">
+        <main className="no-scrollbar relative min-h-screen w-screen min-w-full flex-grow overflow-y-hidden bg-primary px-4 md:px-16">
           {children}
         </main>
       </div>

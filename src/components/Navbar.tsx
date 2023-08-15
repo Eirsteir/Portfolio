@@ -31,7 +31,7 @@ export const Navbar = () => {
   const { pathname: currentRoute } = useRouter();
 
   return (
-    <nav className="absolute right-20 top-24 z-50 bg-primary p-4">
+    <nav className="absolute right-6 top-32 z-50 bg-primary p-4 md:right-20 md:top-24">
       <div className="flex flex-col text-right">
         {Object.keys(ROUTES).map((value) => (
           <NavbarItem
