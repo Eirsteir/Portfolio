@@ -1,10 +1,15 @@
+import { type Project } from "@prisma/client";
 import Image from "next/image";
+import { ProjectCard } from "~/components/ProjectCard";
+import { api } from "~/utils/api";
 
 export default function Home() {
+  const { data: projects } = api.projects.getAll.useQuery(); // TODO: static rendering
+
   return (
-    <div>
+    <div className="no-scrollbar h-screen overflow-y-scroll">
       <div>
-        <div className="container mx-auto">
+        <div className="container mx-auto ">
           <div className="flex h-24 items-center justify-between">
             <div className="flex items-center gap-28 font-medium">
               <a className="inline-block" href="#">
@@ -41,20 +46,20 @@ export default function Home() {
           />
         </div>
         <div className="container mx-auto flex items-center px-4">
-          {/* <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="h-21 w-20 cursor-pointer pt-5 font-bold"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
-                />
-              </svg> */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="h-21 w-20 cursor-pointer pt-5 font-bold"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="M19.5 13.5L12 21m0 0l-7.5-7.5M12 21V3"
+            />
+          </svg>
           <div className="ml-auto max-w-sm text-right">
             <h2 className="font-heading md:text-11xl xl:text-13xl text-7xl">
               <span className="block">SOFTWARE</span>
@@ -63,24 +68,19 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* 
-        <section className="container mx-auto">
-          <h3 className="font-heading mb-8 mr-60 mt-4 text-right text-5xl font-bold">
-            PROJECTS
-          </h3>
+      <div className="container mx-auto">
+        <h3 className="font-heading mb-8 mt-4 text-5xl font-bold">PROJECTS</h3>
 
-          <div>
-            {projects?.map((project: Project, i: number) => (
-              // <ProjectCard
-              //   key={project.id}
-              //   project={project}
-              //   imageOnLeft={i % 2 === 0}
-              // />
-
-              <div key={project.id}></div>
-            ))}
-          </div>
-        </section> */}
+        <div>
+          {projects?.map((project: Project, i: number) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              imageOnLeft={i % 2 === 0}
+            />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

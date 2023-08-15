@@ -3,7 +3,6 @@ import { useRouter } from "next/router";
 
 const ROUTES = {
   Home: "/",
-  Projects: "/projects",
   Info: "/info",
   Contact: "/contact",
 };
@@ -32,7 +31,7 @@ export const Navbar = () => {
   const { pathname: currentRoute } = useRouter();
 
   return (
-    <nav className="absolute right-20 top-32 z-50">
+    <nav className="absolute right-20 top-32 z-50 bg-primary p-4">
       <div className="flex flex-col text-right">
         {Object.keys(ROUTES).map((value) => (
           <NavbarItem

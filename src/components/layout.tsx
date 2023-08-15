@@ -13,9 +13,9 @@ export default function Layout({ children }) {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="flex h-screen overflow-hidden">
+      <div className="no-scrollbar flex ">
         <Navbar />
-        <main className="relative h-screen min-h-screen w-screen min-w-full flex-grow overflow-y-hidden bg-primary px-16">
+        <main className="no-scrollbar relative min-h-screen w-screen min-w-full flex-grow overflow-y-hidden bg-primary px-16">
           {children}
         </main>
       </div>
