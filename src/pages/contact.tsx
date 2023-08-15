@@ -4,7 +4,7 @@ export default function Contact() {
   return (
     <div className="min-w-screen flex min-h-screen items-center justify-center">
       <div className="">
-        <h2 className="my-4 border border-b-2 border-b-slate-950 py-4 text-6xl">
+        <h2 className="my-4  border-b-2 border-b-slate-950 py-4 text-6xl">
           CONTACT
         </h2>
         <div className="grid grid-cols-4 gap-8">

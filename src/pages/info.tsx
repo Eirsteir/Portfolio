@@ -4,7 +4,7 @@ export default function Info() {
   return (
     <div className="min-w-screen flex min-h-screen items-center justify-center">
       <div className="w-3/5">
-        <h2 className="my-4 border border-b-2 border-b-slate-950 py-4 text-6xl">
+        <h2 className="my-4 border-b-2 border-b-slate-950 py-4 text-6xl">
           ABOUT ME
         </h2>
         <div className="">

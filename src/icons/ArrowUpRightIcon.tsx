@@ -3,7 +3,7 @@ export const ArrowUpRightIcon = () => (
     xmlns="http://www.w3.org/2000/svg"
     fill="none"
     viewBox="0 0 24 24"
-    stroke-width="3.3"
+    strokeWidth="3.3"
     stroke="currentColor"
     className="mr-1 h-4 w-4"
   >
