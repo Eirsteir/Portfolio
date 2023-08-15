@@ -16,6 +16,7 @@ model Project {
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
     title      String
+    // slug String
     subtitle String 
     body String @db.VarChar(250)
     programmingLanguage String

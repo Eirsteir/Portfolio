@@ -40,7 +40,9 @@ export const ProjectCard = ({
       <p className="mt-2 text-gray-600">
         Programming Language: {project.programmingLanguage}
       </p>
-      <p className="mt-2 text-gray-600">Date: {project.date.toDateString()}</p>
+      <p className="mt-2 text-gray-600">
+        Date: {new Date(project.date).toLocaleDateString("en-us")}
+      </p>
       <a
         href="#"
         className="hover:text-primary-dark mt-4 inline-block font-semibold text-primary"
