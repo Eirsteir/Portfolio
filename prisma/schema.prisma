@@ -18,7 +18,7 @@ model Project {
     title      String
     // slug String
     subtitle String 
-    body String @db.VarChar(250)
+    body String @db.VarChar(350)
     programmingLanguage String
     date DateTime
     img String?
@@ -32,5 +32,17 @@ enum ProjectType {
     SCHOOL
     SUMMER_INTERNSHIP
     PART_TIME_JOB
+    VOLUNTARY
     OTHER
+}
+
+model Experience {
+    id        String   @id @default(cuid())
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    company String
+    companyLogo String
+    title String
+    startDate DateTime
+    endDate DateTime?
 }

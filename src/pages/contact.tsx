@@ -1,3 +1,4 @@
+import { ArrowDownIcon } from "~/icons/ArrowDownIcon";
 import { ArrowUpRightIcon } from "~/icons/ArrowUpRightIcon";
 
 export default function Contact() {
@@ -15,7 +16,7 @@ export default function Contact() {
           >
             <ArrowUpRightIcon /> steiraeirik@gmail.com
           </a>
-          <h4 className="text-xl font-bold">SOCIAL MEDIAS</h4>
+          <h4 className="text-xl font-bold">SOCIALS</h4>
           <div className="flex flex-col">
             <a
               href="https://github.com/Eirsteir"
@@ -31,6 +32,12 @@ export default function Contact() {
             </a>
           </div>
         </div>
+        <a
+          href="#"
+          className="mt-4 flex items-baseline text-xl hover:underline"
+        >
+          <ArrowDownIcon /> Resume
+        </a>
       </div>
     </div>
   );

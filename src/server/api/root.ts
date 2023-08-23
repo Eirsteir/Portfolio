@@ -1,3 +1,4 @@
+import { experienceRouter } from "~/server/api/routers/experience";
 import { projectRouter } from "~/server/api/routers/project";
 import { createTRPCRouter } from "~/server/api/trpc";
 
@@ -8,6 +9,7 @@ import { createTRPCRouter } from "~/server/api/trpc";
  */
 export const appRouter = createTRPCRouter({
   projects: projectRouter,
+  experience: experienceRouter,
 });
 
 // export type definition of API

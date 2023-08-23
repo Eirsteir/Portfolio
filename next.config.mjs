@@ -32,6 +32,12 @@ const config = {
         port: "",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "imageupload.io",
+        port: "",
+        pathname: "/**",
+      },
     ],
   },
 };
