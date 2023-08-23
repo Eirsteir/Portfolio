@@ -33,15 +33,17 @@ export default function Experience(
 ) {
   const { data } = api.experience.getAll.useQuery();
   return (
-    <div className="min-w-screen flex min-h-screen items-center justify-center">
-      <div className="md:w-3/5">
-        <h2 className="my-4 border-b-2 border-b-slate-950 py-4 text-6xl">
-          EXPERIENCE
-        </h2>
-        <div className="">
-          {data?.map((experience: Experience) => (
-            <WorkExperienceCard key={experience.id} experience={experience} />
-          ))}
+    <div className="no-scrollbar h-screen overflow-y-scroll">
+      <div className="min-w-screen my-48 flex min-h-screen items-center justify-center ">
+        <div className="md:w-3/5">
+          <h2 className="my-4 border-b-2 border-b-slate-950 py-4 text-6xl">
+            EXPERIENCE
+          </h2>
+          <div className="">
+            {data?.map((experience: Experience) => (
+              <WorkExperienceCard key={experience.id} experience={experience} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
