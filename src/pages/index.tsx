@@ -11,6 +11,7 @@ import { api } from "~/utils/api";
 import { createServerSideHelpers } from "@trpc/react-query/server";
 import { prisma } from "~/server/db";
 import superjson from "superjson";
+import { NextSeo } from "next-seo";
 
 export async function getStaticProps(context) {
   const helpers = createServerSideHelpers({
