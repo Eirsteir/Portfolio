@@ -24,6 +24,10 @@ export default function Layout({ children }) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
+        <meta
+          name="google-site-verification"
+          content="tPw21a-SCnQlq_KZy6kITQWnwiObQ33V0LJW-knA90c"
+        />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="no-scrollbar flex ">
