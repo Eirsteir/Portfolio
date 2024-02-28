@@ -31,7 +31,7 @@ export default function Home({
   return (
     <div className="no-scrollbar h-screen overflow-y-scroll">
       <div>
-        <div className="container mx-auto ">
+        <div className="container mx-auto">
           <div className="flex h-36 items-center justify-between md:h-24">
             <div className="flex items-center font-medium md:gap-28">
               <a className="inline-block" href="#">
@@ -50,7 +50,7 @@ export default function Home({
           </div>
         </div>
       </div>
-      <div className="container relative pb-64 pt-20 md:pt-2 lg:pb-28">
+      <div className="container relative mx-auto pb-64 pt-20 md:pt-2 lg:pb-28">
         <div className="relative ">
           <div className="inline-block">
             <h1 className="font-heading text-6xl md:text-8xl">
@@ -61,9 +61,9 @@ export default function Home({
         </div>
         <div className="mr-auto mt-8 block md:mt-2">
           <Image
-            src="/unnamed (1).jpg"
-            width={400}
-            height={120}
+            src="/IMG-5418-2.JPG"
+            width={500}
+            height={220}
             alt="An image of myself"
           />
         </div>
